@@ -16,10 +16,10 @@ public class CustomViewHolder extends RecyclerView.ViewHolder {
     public CustomViewHolder(View itemView) {
         super(itemView);
 
-        txtNama = itemView.findViewById(R.id.item_teman_nama);
-        txtAlamat = itemView.findViewById(R.id.item_teman_alamat);
-        txtTelepon = itemView.findViewById(R.id.item_teman_telepon);
-        txtEmail = itemView.findViewById(R.id.item_teman_email);
+        txtNama = itemView.findViewById(R.id.nameTextView);
+        txtAlamat = itemView.findViewById(R.id.registrationNumTextView);
+        txtTelepon = itemView.findViewById(R.id.phoneTextView);
+        txtEmail = itemView.findViewById(R.id.emailTextView);
         imgDelete = itemView.findViewById(R.id.crossImageView);
         imgEdit = itemView.findViewById(R.id.editImageView);
     }

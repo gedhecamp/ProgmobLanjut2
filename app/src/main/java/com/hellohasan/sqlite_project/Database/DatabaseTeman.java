@@ -4,10 +4,9 @@ import android.content.Context;
 import com.hellohasan.sqlite_project.DaoTeman;
 import com.hellohasan.sqlite_project.entity.Teman;
 
-import androidx.room.Database;
-import androidx.room.Room;
-import androidx.room.RoomDatabase;
-
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.Room;
+import android.arch.persistence.room.RoomDatabase;
 
 @Database(entities = {Teman.class}, version = 1, exportSchema = false)
 public abstract class DatabaseTeman extends RoomDatabase {

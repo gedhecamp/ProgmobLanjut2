@@ -60,16 +60,16 @@ public class TemanUpdateDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_teman_update_dialog, container, false);
+        View view = inflater.inflate(R.layout.fragment_student_update_dialog, container, false);
 
         temanRepository = new TemanRepository(getContext());
 
-        editTemanNama = view.findViewById(R.id.update_teman_nama);
-        editTemanAlamat = view.findViewById(R.id.update_teman_alamat);
-        editTemanTelepon = view.findViewById(R.id.update_teman_telepon);
-        editTemanEmail = view.findViewById(R.id.update_teman_email);
+        editTemanNama = view.findViewById(R.id.studentNameEditText);
+        editTemanAlamat = view.findViewById(R.id.registrationEditText);
+        editTemanTelepon = view.findViewById(R.id.phoneEditText);
+        editTemanEmail = view.findViewById(R.id.emailEditText);
 
-        updateButton = view.findViewById(R.id.updateButton);
+        updateButton = view.findViewById(R.id.updateStudentInfoButton);
         cancelButton = view.findViewById(R.id.cancelButton);
 
 //        String title = getArguments().getString("Update Teman");

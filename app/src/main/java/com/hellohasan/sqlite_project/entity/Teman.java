@@ -1,66 +1,66 @@
 package com.hellohasan.sqlite_project.entity;
 
+import java.io.Serializable;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-public class Teman {
-    @Entity(tableName = "data_teman")
-    public static class EntitasTeman {
+@Entity(tableName = "db_teman")
+public class Teman implements Serializable {
 
         @PrimaryKey(autoGenerate = true)
-        public int Id;
+        public int id;
 
-        @ColumnInfo(name = "nama_teman")
-        public String nama_teman;
+        @ColumnInfo(name = "teman_nama")
+        public String temanNama;
 
-        @ColumnInfo(name = "alamat_teman")
-        public String alamat_teman;
+        @ColumnInfo(name = "teman_alamat")
+        public String temanAlamat;
 
-        @ColumnInfo(name = "telp_teman")
-        public String telp_teman;
+        @ColumnInfo(name = "teman_telepon")
+        public String temanTelepon;
 
-        @ColumnInfo(name = "email_teman")
-        public String email_teman;
+        @ColumnInfo(name = "teman_email")
+        public String temanEmail;
 
         public int getId() {
-            return Id;
+            return id;
         }
 
         public void setId(int id) {
-            Id = id;
+            this.id = id;
         }
 
-        public String getNama_teman() {
-            return nama_teman;
-        }
+    public String getTemanNama() {
+        return temanNama;
+    }
 
-        public void setNama_teman(String nama_teman) {
-            this.nama_teman = nama_teman;
-        }
+    public void setTemanNama(String temanNama) {
+        this.temanNama = temanNama;
+    }
 
-        public String getAlamat_teman() {
-            return alamat_teman;
-        }
+    public String getTemanAlamat() {
+        return temanAlamat;
+    }
 
-        public void setAlamat_teman(String alamat_teman) {
-            this.alamat_teman = alamat_teman;
-        }
+    public void setTemanAlamat(String temanAlamat) {
+        this.temanAlamat = temanAlamat;
+    }
 
-        public String getTelp_teman() {
-            return telp_teman;
-        }
+    public String getTemanTelepon() {
+        return temanTelepon;
+    }
 
-        public void setTelp_teman(String telp_teman) {
-            this.telp_teman = telp_teman;
-        }
+    public void setTemanTelepon(String temanTelepon) {
+        this.temanTelepon = temanTelepon;
+    }
 
-        public String getEmail_teman() {
-            return email_teman;
-        }
+    public String getTemanEmail() {
+        return temanEmail;
+    }
 
-        public void setEmail_teman(String email_teman) {
-            this.email_teman = email_teman;
-        }
+    public void setTemanEmail(String temanEmail) {
+        this.temanEmail = temanEmail;
     }
 }

@@ -37,14 +37,14 @@ public class TemanListRecyclerViewAdapter extends RecyclerView.Adapter<CustomVie
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.teman_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.student_item, parent, false);
         return new CustomViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder, int position) {
         final int itemPosition = position;
-        final Teman product = temanList.get(position);
+        final Teman teman = temanList.get(position);
 
         Log.e("slfj","lsdjf id1 "+teman.getId());
 
@@ -62,7 +62,7 @@ public class TemanListRecyclerViewAdapter extends RecyclerView.Adapter<CustomVie
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface arg0, int arg1) {
-                                deleteStudent(itemPosition);
+                                deleteTeman(itemPosition);
                             }
                         });
 

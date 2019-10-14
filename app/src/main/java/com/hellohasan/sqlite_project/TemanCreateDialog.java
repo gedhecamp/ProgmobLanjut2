@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 
 import com.hellohasan.sqlite_project.Database.DatabaseTeman;
+import com.hellohasan.sqlite_project.entity.Teman;
 import com.hellohasan.sqlite_project.repository.TemanRepository;
 
 
@@ -33,7 +34,7 @@ public class TemanCreateDialog extends DialogFragment {
 
     public static TemanCreateDialog newInstance(String title, TemanCreateListener listener){
         temanCreateListener = listener;
-        TemanCreateDialog productCreateDialogFragment = new TemanCreateDialog();
+        TemanCreateDialog temanCreateDialog = new TemanCreateDialog();
         Bundle args = new Bundle();
         args.putString("title", title);
         temanCreateDialog.setArguments(args);
@@ -48,15 +49,15 @@ public class TemanCreateDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_product_create_dialog, container, false);
+        View view = inflater.inflate(R.layout.fragment_student_create_dialog, container, false);
 
-        editTemanNama = view.findViewById(R.id.create_teman_nama);
-        editTemanAlamat = view.findViewById(R.id.create_teman_alamat);
-        editTemanTelepon = view.findViewById(R.id.create_teman_telepon);
-        editTemanEmail = view.findViewById(R.id.create_teman_email);
+        editTemanNama = view.findViewById(R.id.studentNameEditText);
+        editTemanAlamat = view.findViewById(R.id.registrationEditText);
+        editTemanTelepon = view.findViewById(R.id.phoneEditText);
+        editTemanEmail = view.findViewById(R.id.emailEditText);
 
         createButton = view.findViewById(R.id.createButton);
-        cancelButton = view.findViewById(R.id.createCancelButton);
+        cancelButton = view.findViewById(R.id.cancelButton);
 
         String title = getArguments().getString("Create DatabaseTeman");
         getDialog().setTitle("Create DatabaseTeman");
@@ -68,29 +69,16 @@ public class TemanCreateDialog extends DialogFragment {
                 alamatString = editTemanAlamat.getText().toString();
                 teleponString = editTemanTelepon.getText().toString();
                 emailString = editTemanEmail.getText().toString();
-                if (editProductHarga.getText().toString().equals("")){
-                    hargaInt="0";
-                }
-                else {
-                    hargaInt = editProductHarga.getText().toString();
-                }
 
-                if (editProductQty.getText().toString().equals("")){
-                    qtyInt="0";
-                }
-                else {
-                    qtyInt = editProductQty.getText().toString();
-                }
+                TemanRepository temanRepository = new TemanRepository(getContext());
+                Teman teman = new Teman();
+                teman.setTemanNama(namaString);
+                teman.setTemanAlamat(alamatString);
+                teman.setTemanTelepon(teleponString);
+                teman.setTemanEmail(emailString);
 
-                TemanRepository productRepository = new TemanRepository(getContext());
-                DatabaseTeman databaseTeman = new DatabaseTeman();
-                databaseTeman.setTemanNama(namaString);
-                databaseTeman.setTemanAlamat(alamatString);
-                databaseTeman.setTemanTelepon(teleponString);
-                databaseTeman.setTemanEmail(emailString);
-
-                temanRepository.insertTeman(databaseTeman);
-                temanCreateListener.onProductCreated(databaseTeman);
+                temanRepository.insertTeman(teman);
+                temanCreateListener.onTemanCreated(teman);
                 getDialog().dismiss();
             }
         });
