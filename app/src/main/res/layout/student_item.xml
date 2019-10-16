@@ -22,7 +22,8 @@
         app:fontFamily="sans-serif-black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Suarnata" />
+        tools:text="Suarnata"
+        android:layout_marginStart="10dp" />
 
     <ImageView
         android:id="@+id/editImageView"
@@ -34,7 +35,8 @@
         android:src="@drawable/ic_mode_edit_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/emailTitle"
         app:layout_constraintRight_toLeftOf="@+id/crossImageView"
-        app:layout_constraintTop_toTopOf="@+id/nameTextView" />
+        app:layout_constraintTop_toTopOf="@+id/nameTextView"
+        android:layout_marginEnd="10dp" />
 
     <ImageView
         android:id="@+id/crossImageView"
@@ -46,14 +48,15 @@
         android:src="@drawable/ic_delete_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/editImageView"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editImageView" />
+        app:layout_constraintTop_toTopOf="@+id/editImageView"
+        android:layout_marginEnd="10dp" />
 
     <TextView
         android:id="@+id/registrationNumTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Alamat"
+        android:text="@string/alamat"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="@+id/nameTextView"
@@ -67,7 +70,8 @@
         android:layout_marginTop="5dp"
         app:layout_constraintLeft_toRightOf="@id/registrationNumTitle"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView"
-        tools:text="Sempidi" />
+        tools:text="Sempidi"
+        android:layout_marginStart="5dp" />
 
     <TextView
         android:id="@+id/emailTitle"
@@ -87,7 +91,8 @@
         android:layout_marginTop="5dp"
         app:layout_constraintLeft_toRightOf="@id/emailTitle"
         app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
-        tools:text="gsuarnata99@gmail.com" />
+        tools:text="gsuarnata99@gmail.com"
+        android:layout_marginStart="5dp" />
 
     <TextView
         android:id="@+id/phoneTitle"
@@ -108,6 +113,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintLeft_toRightOf="@id/phoneTitle"
         app:layout_constraintTop_toBottomOf="@+id/registrationNumTextView"
-        tools:text="087730534612" />
+        tools:text="087730534612"
+        android:layout_marginStart="5dp" />
 
 </android.support.constraint.ConstraintLayout>

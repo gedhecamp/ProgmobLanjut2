@@ -16,4 +16,13 @@
     <string name="create_button">Create</string>
     <string name="all_delete">All Delete</string>
     <string name="edit_button_description">Edit Satu Data</string>
+    <string name="alamat">Alamat</string>
+    <string name="update1">Update</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="informasi">Informasi</string>
+    <string name="nama">Nama</string>
+    <string name="alamat1">Alamat</string>
+    <string name="telepon">Telepon</string>
+    <string name="email1">Email</string>
 </resources>
